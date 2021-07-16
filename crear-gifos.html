@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREAR GIFOS</title>
+    <link rel="stylesheet" href="./scss/crear gifos/crear-gifos.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;700&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="lineaVioleta"></div>
+        <div class="contenedorLogoMenu">
+            <a href="./index.html">
+                <img class="logo-mobile logo-diurno"  src="./img/logo-mobile.svg" alt="logo">
+            </a>
+            <a href="./index.html">
+                <img class="logo-desktop logo-diurno" src="./img/logo-desktop.svg" alt="logo">
+            </a>
+
+            <!-- logo dark -->
+
+            <a href="./index.html">
+                <img class="logo-mobile logo-dark" src="./img/logo-mobile-modo-noct.svg" alt="logo">
+            </a>
+            <a href="./index.html">
+                <img class="logo-desktop logo-dark" src="./img/Logo-modo-noc.svg" alt="logo">
+            </a>
+
+            <!-- menu hamburguesa light -->
+
+            <input type="checkbox" id="burger-menu">
+            <label class="menu-hamb hamb-diurno" for="burger-menu">
+                <img src="./img/burger.svg" alt="menu">
+            </label>
+            <label class="cross-menu cross-diurno" for="burger-menu">
+                <img src="./img/close.svg" alt="">
+            </label>
+
+            <!-- menu hamburguesa dark -->
+
+            <input type="checkbox" id="burger-menu">
+            <label class="menu-hamb hamb-dark" for="burger-menu">
+                <img src="./img/burger-modo-noct.svg" alt="menu">
+            </label>
+            <label class="cross-menu cross-dark" for="burger-menu">
+                <img src="./img/close-modo-noct.svg" alt="">
+            </label>
+            <!-- termina menu hamburguesa dark -->
+
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a class="link" id="btnDarkMode" href="#">Modo 
+                            <span class="btn-light">Nocturno</span>
+                            <Span class="btn-dark">Diurno</Span> 
+                        </a>
+                        <div class="lineaDebajoLink"></div>
+                    </li>
+                    <li>
+                        <a class="link" href="./favoritos.html">Favoritos</a>
+                        <div class="lineaDebajoLink"></div>
+                    </li>
+                    <li>
+                        <a class="link" href="./mis-gifos.html">Mis GIFOS</a>
+                        <div class="lineaDebajoLink"></div>
+                    </li>
+                    <li class="btn-crearGif">
+                        <a href="./crear-gifos.html">
+                            <button>+</button>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+</body>
+<script src="./js/dark.js"></script>
+</html>

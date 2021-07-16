@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFOS HOME</title>
+    <link rel="stylesheet" href="./scss/index/indexStyle.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;700&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="lineaVioleta"></div>
+        <div class="contenedorLogoMenu">
+            <a href="./index.html">
+                <img class="logo-mobile logo-diurno" src="./img/logo-mobile.svg" alt="logo">
+            </a>
+            <a href="./index.html">
+                <img class="logo-desktop logo-diurno" src="./img/logo-desktop.svg" alt="logo">
+            </a>
+
+            <!-- logo dark -->
+
+            <a href="./index.html">
+                <img class="logo-mobile logo-dark" src="./img/logo-mobile-modo-noct.svg" alt="logo">
+            </a>
+            <a href="./index.html">
+                <img class="logo-desktop logo-dark" src="./img/Logo-modo-noc.svg" alt="logo">
+            </a>
+
+            <!-- menu hamburguesa light -->
+
+            <input type="checkbox" id="burger-menu">
+            <label class="menu-hamb hamb-diurno" for="burger-menu">
+                <img src="./img/burger.svg" alt="menu">
+            </label>
+            <label class="cross-menu cross-diurno" for="burger-menu">
+                <img src="./img/close.svg" alt="">
+            </label>
+
+            <!-- menu hamburguesa dark -->
+
+            <input type="checkbox" id="burger-menu">
+            <label class="menu-hamb hamb-dark" for="burger-menu">
+                <img src="./img/burger-modo-noct.svg" alt="menu">
+            </label>
+            <label class="cross-menu cross-dark" for="burger-menu">
+                <img src="./img/close-modo-noct.svg" alt="">
+            </label>
+            <!-- termina menu hamburguesa dark -->
+
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a class="link" id="btnDarkMode" href="#">Modo
+                            <span class="btn-light">Nocturno</span>
+                            <Span class="btn-dark">Diurno</Span>
+                        </a>
+                        <div class="lineaDebajoLink"></div>
+                    </li>
+                    <li>
+                        <a class="link" href="./favoritos.html">Favoritos</a>
+                        <div class="lineaDebajoLink"></div>
+                    </li>
+                    <li>
+                        <a class="link" href="./mis-gifos.html">Mis GIFOS</a>
+                        <div class="lineaDebajoLink"></div>
+                    </li>
+                    <li class="btn-crearGif">
+                        <a href="./crear-gifos.html">
+                            <button>+</button>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- empieza el main -->
+    <main>
+        <h1>Inspírate, busca, guarda, y crea los mejores <span>GIFOS</span></h1>
+        <!-- contenedor buscador con imagen -->
+        <div class="contenedor-img-buscador">
+            <img class="ilustracion" src="./img/ilustra_header.svg" alt="tres personas saludando">
+            <div class="contenedor-input-buscador">
+                <form class="formulario" action="">
+                    <input type="text" placeholder="Busca GIFOS y más" class="buscador" name="q">
+                    <button type="submit" class="search-btn-light">
+                        <img src="./img/icon-search.svg" alt="buscador" class="icon-search-light">
+                    </button>
+                    <button class="search-btn-dark">
+                        <img src="./img/icon-search-mod-noc.svg" alt="buscador" class="icon-search-dark">
+                    </button>
+                </form>
+            </div>
+        </div>
+        <h2 class="titulo-busqueda">Hola mundo</h2>
+        <div class="contenedor-busqueda"></div>
+            <!-- contenedor titulo y parrafo trending -->
+            <!-- <div class="contenedor-titulo-trending">
+                <h2 class="trending">Trending:</h2>
+                <p id="trendingP">Reactions, Entertainment, Sports, Stickers, Artists</p>
+            </div> -->
+            <!-- contenedor gifos trendings -->
+            <!-- <section id="contenedor-trending-gifos">
+                <div class="trendin-titulo">
+                    <h2>Trending GIFOS</h2>
+                    <p>Mira los últimos <br> GIFOS de nuestra comunidad.</p>
+                </div>
+                <div id="contenedor-slider">
+                    <button id="btn-carousel-left-light"><img src="./img/button-slider-left.svg" alt=""></button>
+                    <button id="btn-carousel-left-dark"><img src="./img/button-slider-left-md-noct.svg" alt=""></button>
+                    <div id="contenedor-carousel">
+                        <div id="carousel">
+                            <div class="trending-gif">
+                                <a href="#"><img src="https://media.giphy.com/media/NEvPzZ8bd1V4Y/giphy.gif" alt=""></a>
+                            </div>
+                        </div>
+                        <div id="carousel">
+                            <div class="trending-gif">
+                                <a href="#"><img src="https://media.giphy.com/media/NEvPzZ8bd1V4Y/giphy.gif" alt=""></a>
+                            </div>
+                        </div>
+                        <div id="carousel">
+                            <div class="trending-gif">
+                                <a href="#"><img src="https://media.giphy.com/media/NEvPzZ8bd1V4Y/giphy.gif" alt=""></a>
+                            </div>
+                        </div>
+                        <div id="carousel">
+                            <div class="trending-gif">
+                                <a href="#"><img src="https://media.giphy.com/media/NEvPzZ8bd1V4Y/giphy.gif" alt=""></a>
+                            </div>
+                        </div>
+                        <div id="carousel">
+                            <div class="trending-gif">
+                                <a href="#"><img src="https://media.giphy.com/media/NEvPzZ8bd1V4Y/giphy.gif" alt=""></a>
+                            </div>
+                        </div>
+                        <div id="carousel">
+                            <div class="trending-gif">
+                                <a href="#"><img src="https://media.giphy.com/media/NEvPzZ8bd1V4Y/giphy.gif" alt=""></a>
+                            </div>
+                        </div>
+                        <div id="carousel">
+                            <div class="trending-gif">
+                                <a href="#"><img src="https://media.giphy.com/media/NEvPzZ8bd1V4Y/giphy.gif" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="btn-carousel-right-light"><img src="./img/Button-Slider-right.svg" alt=""></button>
+                    <button id="btn-carousel-right-dark"><img src="./img/button-slider-right-md-noct.svg"
+                            alt=""></button>
+                </div>
+        </div>
+        </section> -->
+    </main>
+    <!-- Comienza el footer -->
+    <!-- <footer>
+        <div class="redes">
+            <h3>Compartir en:</h3>
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+        <h4></h4>
+    </footer> -->
+
+</body>
+<script src="./js/dark.js"></script>
+
+</html>

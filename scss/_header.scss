@@ -1,0 +1,371 @@
+@import './variables';
+
+header {
+    max-width: 500px;
+    width: 100vw;
+    height: 100px;
+
+    body.dark & {
+        background: $grisDark;
+    }
+
+    div.lineaVioleta {
+        position: fixed;
+        width: 100%;
+        height: 5px;
+        background: $violeta;
+
+        body.dark & {
+            background: $negro
+        }
+    }
+
+
+    div.contenedorLogoMenu {
+        position: fixed;
+        background: $blanco;
+        top: 5px;
+        width: 100%;
+        height: 95px;
+        display: flex;
+        justify-content: space-evenly;
+
+        body.dark & {
+            background: $grisDark;
+        }
+
+        img.logo-mobile {
+            position: absolute;
+            top: 21px;
+            left: 5%;
+
+        }
+
+        img.logo-diurno {
+            body.dark & {
+                display: none;
+            }
+        }
+
+        img.logo-desktop {
+            display: none;
+
+        }
+
+        img.logo-mobile.logo-dark {
+            display: none;
+
+            body.dark & {
+                display: block;
+            }
+        }
+
+        input#burger-menu {
+            display: none;
+        }
+
+        label.menu-hamb {
+            display: block;
+            margin: 33px 5% auto auto;
+
+            body.dark & {
+                display: none;
+            }
+        }
+
+        label.hamb-dark {
+            display: none;
+
+            body.dark & {
+                display: block;
+            }
+        }
+
+        input#burger-menu:checked~.menu {
+            top: 100px;
+            transition: all 0.5s ease-in;
+        }
+
+        input#burger-menu:checked~.cross-menu.cross-diurno {
+            display: block;
+            transition: all 0.5s ease-out;
+
+            body.dark & {
+                display: none;
+            }
+        }
+
+        input#burger-menu:checked~.cross-menu.cross-dark {
+            display: none;
+            transition: all 0.5s ease-out;
+
+            body.dark & {
+                display: block;
+            }
+        }
+
+        input#burger-menu:checked~.menu-hamb {
+            display: none;
+
+        }
+
+        label.cross-menu.cross-diurno {
+            display: none;
+            margin: 33px 5% auto auto;
+
+        }
+
+        label.cross-menu.cross-dark {
+            display: none;
+            margin: 33px 5% auto auto;
+        }
+
+        nav.menu {
+            position: fixed;
+            background: #562ee5c4 90%;
+            width: 100%;
+            top: -100%;
+            height: 100%;
+            transition: 0.5s ease-out;
+
+            body.dark & {
+                background: $negro;
+
+                a {
+                    color: $blanco;
+                }
+
+            }
+
+            ul {
+                height: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                margin-left: auto;
+                margin-right: auto;
+                align-items: center;
+
+                li {
+                    height: 60px;
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        text-decoration: none;
+                        text-align: center;
+                        letter-spacing: 0;
+                        margin: auto;
+                        color: white;
+                        size: 15px;
+                        font-weight: bold;
+
+                        span.btn-light{
+                            body.dark & {
+                                display: none;
+                            }
+                        }
+
+                        span.btn-dark {
+                            display: none;
+                            body.dark & {
+                                display: inline-block;
+                            }
+                        }
+
+                        
+                    }
+
+                    a.dark {
+                        color: $blanco;
+                    }
+
+                    div.lineaDebajoLink {
+                        width: 41px;
+                        height: 1px;
+                        background: $blanco;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+
+                li.btn-crearGif {
+                    display: none;
+                }
+            }
+
+
+        }
+
+    }
+}
+
+@media screen and (min-width: 501px) {
+    header {
+        max-width: 1440px;
+
+        div.contenedorLogoMenu {
+
+            img.logo-mobile.logo-diurno {
+                display: none;
+            }
+
+            img.logo-mobile.logo-dark {
+                display: none;
+
+                body.dark & {
+                    display: none;
+                }
+            }
+
+            img.logo-desktop {
+                display: block;
+                position: absolute;
+                left: 5%;
+                top: 21px;
+            }
+
+            img.logo-dektop.logo-diurno {
+                body.dark & {
+                    display: none;
+                }
+            }
+
+            img.logo-desktop.logo-dark {
+                display: none;
+
+                body.dark & {
+                    display: block;
+                }
+            }
+
+            input#burger-menu {
+                display: none;
+            }
+
+            label.menu-hamb.hamb-diurno {
+                display: none;
+            }
+
+            label.cross-menu.cross-menu.cross-diurno {
+                display: none;
+
+            }
+
+            label.cross-menu.cross-dark {
+                display: none;
+            }
+
+            input#burger-menu:checked~.cross-menu.cross-dark {
+                display: none;
+
+                body.dark & {
+                    display: none;
+                }
+            }
+
+            nav.menu {
+                width: 60%;
+                height: 95px;
+                top: 5px;
+                right: 0%;
+                left: auto;
+                background: $blanco;
+
+                body.dark & {
+                    background: $grisDark;
+                }
+
+                ul {
+                    position: relative;
+                    top: 10px;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-items: baseline;
+
+                    li {
+                        display: flex;
+
+                        a {
+                            text-align: center;
+                            letter-spacing: 0;
+                            margin: auto;
+                            color: $violeta;
+                            size: 13px;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                        }
+
+                        div.lineaDebajoLink {
+                            display: none;
+                        }
+
+                        a.link:hover {
+                            text-decoration: underline solid 3px $celeste;
+                        }
+
+                        a.link:active {
+                            text-decoration: none;
+                            color: $gris;
+                        }
+
+                        span.btn-dark:hover {
+                            text-decoration: underline $celeste 3px solid;
+                        }
+                    }
+
+                    li.btn-crearGif {
+                        display: block;
+
+                        a button {
+                            width: 54px;
+                            height: 54px;
+                            cursor: pointer;
+                            font-size: xx-large;
+                            background-color: $blanco;
+                            border: 1px solid $violeta;
+                            border-radius: 50%;
+                            color: $violeta;
+                            transition: all 0.2s ease-in;
+
+                            body.dark & {
+                                color: $blanco;
+                                border-color: $blanco;
+                                background-color: $grisDark;
+                            }
+                        }
+
+                        a button:hover {
+                            background-color: $violeta;
+                            color: $blanco;
+                            transition: all 0.2s ease-out;
+
+                            body.dark & {
+                                background-color: $blanco;
+                                color: $negro;
+                            }
+                        }
+
+                        a button:active {
+                            background-color: $gris;
+                            color: $blanco;
+                            border-color: $gris;
+
+                            body.dark & {
+                                background-color: $gris;
+                                color: $blanco;
+                                border-color: $gris;
+                            }
+                        }
+                    }
+                }
+
+
+            }
+
+            input#burger-menu:checked~.menu {
+                top: unset;
+            }
+        }
+    }
+}
